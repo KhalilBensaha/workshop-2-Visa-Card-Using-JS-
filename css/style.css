@@ -151,6 +151,10 @@ ul{
     box-shadow: 10px 10px 10px 4px #a2c0dc;
 }
 
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
 .card-form-input:focus{
     border: 1px soid var(--primary-color);
     box-shadow: 1px 1px 15px 0px var(--primary-color);

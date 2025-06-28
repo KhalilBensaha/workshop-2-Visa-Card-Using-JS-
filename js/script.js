@@ -72,3 +72,81 @@ cardYearInput.onkeyup = function() {
 cardCvvInput.onkeyup = function() {
     cardCvvDisplay.innerHTML = cardCvvInput.value || 'CVV';
 }
+
+function generateYear(){
+    for(let i = 2023; i <= 2030; i++){
+        let option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        cardYearInput.appendChild(option);
+    }
+}
+generateYear();
+
+function generateMonth(){
+    for(let i = 1; i <= 12; i++){
+        let option = document.createElement('option');
+        option.value = i < 10 ? '0' + i : i;
+        option.textContent = i < 10 ? '0' + i : i;
+        cardMonhInput.appendChild(option);
+    }
+}
+generateMonth();
+
+/*
+// Function to flip the card
+function flipCard() {
+    const card = document.querySelector('.card');
+    card.classList.toggle('flipped');
+}
+/*
+// Function to unflip the card
+function unflipCard() {
+    const card = document.querySelector('.card');
+    card.classList.remove('flipped');
+}*/
+/*
+// Event listeners for flipping the card
+document.querySelector('.card').addEventListener('click', function() {
+    const card = document.querySelector('.card');
+    if (card.classList.contains('flipped')) {
+        unflipCard();
+    } else {
+        flipCard();
+    }
+});
+
+// Event listeners for input focus to flip the card
+cardNumberInput.addEventListener('focus', flipCard);
+cardHolderInput.addEventListener('focus', flipCard);
+cardMonhInput.addEventListener('focus', flipCard);
+*/
+
+cardCvvInput.onfocus = function() {
+    const card = document.querySelector('.card');
+    card.classList.add('flipped');
+}
+
+cardCvvInput.onblur = function() {
+    const card = document.querySelector('.card');
+    card.classList.remove('flipped');
+}
+
+
+cardMonhInput.onchange = function() {
+    if (cardMonhInput.value != 0) {
+      cardExpiryMonth.innerHTML = cardMonhInput.value; // Prevent past months
+    }else {
+      cardExpiryMonth.innerHTML = 'MM'; // Default value if no month is selected
+    }
+}
+
+cardYearInput.onchange = function() {
+    if (cardYearInput.value != 0) {
+      cardExpiryYear.innerHTML = cardYearInput.value; // Prevent past years
+    }
+    else {
+      cardExpiryYear.innerHTML = 'YYYY'; // Default value if no year is selected
+    }
+
+}
