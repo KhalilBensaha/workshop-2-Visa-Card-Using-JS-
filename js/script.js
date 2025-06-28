@@ -132,7 +132,6 @@ cardCvvInput.onblur = function() {
     card.classList.remove('flipped');
 }
 
-
 cardMonhInput.onchange = function() {
     if (cardMonhInput.value != 0) {
       cardExpiryMonth.innerHTML = cardMonhInput.value; // Prevent past months
@@ -150,3 +149,57 @@ cardYearInput.onchange = function() {
     }
 
 }
+/*
+// Function to validate the card expiry date
+function validateExpiryDate() {
+    const month = parseInt(cardMonhInput.value, 10);
+    const year = parseInt(cardYearInput.value, 10);
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1; // Months are zero-indexed
+
+    if (year < currentYear || (year === currentYear && month < currentMonth)) {
+        cardExpiryMonth.innerHTML = 'MM';
+        cardExpiryYear.innerHTML = 'YY';
+        alert('Invalid Expiry Date');
+    } else {
+        cardExpiryMonth.innerHTML = month < 10 ? '0' + month : month; // Format month
+        cardExpiryYear.innerHTML = year.toString().slice(-2); // Last two digits of the year
+    }
+}
+// Event listener for expiry date input changes
+cardMonhInput.addEventListener('change', validateExpiryDate);
+cardYearInput.addEventListener('change', validateExpiryDate);
+
+// Initial validation on page load
+validateExpiryDate();
+
+/*
+// Function to validate the card number format
+function validateCardNumber() {
+    const cardNumber = cardNumberInput.value.replace(/\s/g, ''); // Remove spaces
+    const regex = /^\d{16}$/; // Regex for 16 digits
+    if (!regex.test(cardNumber)) {
+        cardNumberDisplay.innerHTML = 'Invalid Card Number';
+    } else {
+        cardNumberDisplay.innerHTML = cardNumber.match(/.{1,4}/g).join(' '); // Format as XXXX XXXX XXXX XXXX
+    }
+}
+// Event listener for card number input
+cardNumberInput.addEventListener('input', validateCardNumber);  
+// Initial validation on page load
+validateCardNumber();   
+// Function to validate the card holder name
+function validateCardHolder() {
+    const cardHolder = cardHolderInput.value.trim();
+    if (cardHolder === '') {
+        cardHolderDisplay.innerHTML = 'FULL NAME';
+    } else {
+        cardHolderDisplay.innerHTML = cardHolder.toUpperCase(); // Display in uppercase
+    }
+}
+// Event listener for card holder input
+cardHolderInput.addEventListener('input', validateCardHolder);
+// Initial validation on page load
+validateCardHolder();
+*/
