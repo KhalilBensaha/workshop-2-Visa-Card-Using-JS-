@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create card</title>
+
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section id="create-card">
+            <div class="container create-card-container">
+                <div class="create-card-presentation grid-row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 create-card-cart" style="display: flex; justify-content: center;">
+                        <div class="card">
+                            <div class="face">
+                                <div class="card-head">
+                                    <div class="chip">
+                                        <img src="./images/chip.png" class="chip-img card-img" />
+                                    </div>
+                                    <div class="logo">
+                                        <img src="./images/visa.png" class="logo-img card-img" />
+                                    </div>
+                                </div>
+                                <div class="card-description grid-row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 card-description">
+                                        <div class="card-information">
+                                            <span class="card-number-presentation">
+                                                ################
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-9 col-xxs-9 card-description">
+                                        <div class="card-information small-information">
+                                            <labe class="card-holder-label">
+                                                card holder
+                                            </labe>
+                                            <span class="card-holder-presentation">
+                                                full name
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 col-xxs-3 card-description">
+                                        <div class="card-information small-information">
+                                            <labe class="card-holder-label">
+                                                expires
+                                            </labe>
+                                            <div class="card-holder-presentation">
+                                                <span class="exp-month">
+                                                    MM
+                                                </span>
+                                                <span class="exp-year">
+                                                    YYYY
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="card-head">
+                                    <div class="bar">
+
+                                    </div>
+                                </div>
+                                <div class="back-body">
+                                    <div class="back-information">
+                                        <span class="ccv">
+                                            ####
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="back-footer">
+                                    <div class="logo">
+                                        <img src="./images/visa.png" class="logo-img card-img" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 create-card-cart">
+                        <div class="card-form">
+                            <form class="grid-row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <label for="card-number">Card number</label>
+                                        <input type="text" class="card-form-input card-number-input" maxlength="16" placeholder="Please enter your card number ... " />
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <label for="card-holder">Card holder</label>
+                                        <input type="text" class="card-form-input card-holder-input" placeholder="Please enter your Full name ..." />
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <label for="expiration-month">
+                                            Expiration mm
+                                        </label>
+                                        <select class="card-form-input month-input">
+                                            <option value="0" selected>
+                                                Select the month
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <label for="expiration-year">
+                                            Expiration yyyy
+                                        </label>
+                                        <select class="card-form-input year-input">
+                                            <option value="0" selected>
+                                                Select the year
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <label for="ccv-number">
+                                            CCV
+                                        </label>
+                                        <input type="text" class="card-form-input ccv-input" placeholder="Please enter The ccv ..." />
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12 card-form-cart">
+                                    <div class="form-groupe">
+                                        <input type="submit" value="Submit" class="submit-btn form-button" />    
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src='./js/script.js'></script>
+</body>
+</html>
